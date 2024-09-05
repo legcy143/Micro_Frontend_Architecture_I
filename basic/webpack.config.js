@@ -5,6 +5,11 @@ module.exports = {
   entry: "./src/app.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename:"output.js"
+    filename: "output.js",
+  },
+  devServer: {
+    static: path.join(__dirname, "dist"),
+    compress: true,
+    port: 3500,
   },
 };
